@@ -31,7 +31,7 @@ helloWorld = """
 <body>
   <div>
     <h1>Don Felix Gurtierrez Dinner Xperience</h1>
-    <img src="/static/sammytheshark.gif" />
+    <img src="/static/restaurantplates.gif" />
     <h2>Welcomes You Here!</h2>
     <p>This message is coming to you via a simple Django application that's live on your Droplet! This droplet is all set up with Python, Django, and Postgres. It's also using Gunicorn to run the application on system boot and using nginx to proxy traffic to the application over port 80.</p>
     <h2>Get your code on here</h2>
