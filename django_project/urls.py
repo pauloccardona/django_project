@@ -21,6 +21,6 @@ from django_project.core import views
 
 
 urlpatterns = [
-    path('', views.index, name='home'),
+    path('', views.home, name='home'),
     path('admin/', admin.site.urls)
 ]
