@@ -50,7 +50,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-#    'django_project.core',
+#    'django_project/django_project.core',
 ]
 
 MIDDLEWARE = [
@@ -69,7 +69,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-#            os.path.join(BASE_DIR,'/django_project/templates/'),
+            os.path.join(BASE_DIR,'django_project/templates'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
