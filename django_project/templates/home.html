@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h2>Now logged as: {% if user.is_authenticated %} {{ user.username }} {% else %} Guest User {% endif %} </h2>
+<h2>Authenticated as: {% if user.is_authenticated %} {{ user.username }} {% else %} Our Guest {% endif %} </h2>
 <p>
     <strong>Total number of register users: </strong> {{ count }}
 </p>
