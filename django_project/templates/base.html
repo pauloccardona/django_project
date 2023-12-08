@@ -7,9 +7,9 @@
 <body>
     <h1>Don Felix Gutierrez Dinner Xperience</h1>
     <a href="{% url 'home' %}">Home</a>/
-    <strong>You are logged as: {{ user.user_name }} </strong>
     {% if user.is_authenticated %}
-        <a href="{% url 'logout'%}">Log Out</a>
+        <strong>You are logged as: {{ user.user_name }} </strong>
+        <a href="{% url 'logout'%}">I want to Log Out</a>
     {% else %}
         <a href="{% url 'signup'%}">Sign Up</a>/
         <a href="{% url 'login'%}">Log In</a>/
