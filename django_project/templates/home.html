@@ -1,6 +1,9 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 
 {% block content %}
-<h2>Order Online Form</h2>
-<p>User: paulo.cesar.cardona@gmail.com</p>
+<h2>Now logged as: {% if user.is_authenticated %} {{ user.username }} {% else %} Guest User {% endif %} </h2>
+<p>
+    <strong>Total number of register users: </strong> {{ count }}
+</p>
+<p>ThankYou!</p>
 {% endblock %}
