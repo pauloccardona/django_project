@@ -1,4 +1,4 @@
-ffrom django.shortcuts import render,redirect
+from django.shortcuts import render,redirect
 from django.contrib.auth.forms import User
 from django.contrib.auth.forms import UserCreationForm
 
