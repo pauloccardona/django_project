@@ -11,6 +11,7 @@
         <a href="{% url 'newcheck' %}">New Check</a>/
         <a href="{% url 'password_change' %}">Change Password</a>/
         <a href="{% url 'logout' %}">Log Out</a>
+        <p>Authenticated as {{ user.username }}</p>
     {% else %}
         <a href="{% url 'signup' %}">Sign Up</a>/
         <a href="{% url 'login' %}">Log In</a>/
