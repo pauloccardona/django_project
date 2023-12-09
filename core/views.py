@@ -1,6 +1,7 @@
 from django.shortcuts import render,redirect
 from django.contrib.auth.forms import User
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.decorators import login_required
 
 # Create your views here.
 def home(request):
@@ -21,5 +22,6 @@ def signup(request):
         'form': form
     })
 
+@login_required
 def new_check(request):
     return render(request,"new_check.html")
