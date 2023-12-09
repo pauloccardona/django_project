@@ -20,3 +20,6 @@ def signup(request):
     return render(request,"registration/signup.html",{
         'form': form
     })
+
+def new_check(request)
+    return render(request,"new_check.html")
