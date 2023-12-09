@@ -21,5 +21,5 @@ def signup(request):
         'form': form
     })
 
-def new_check(request)
+def new_check(request):
     return render(request,"new_check.html")
