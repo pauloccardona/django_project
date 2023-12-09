@@ -12,6 +12,7 @@
         <a href="{% url 'password_change' %}">Change Password</a>/ 
         <a href="{% url 'logout' %}">Log Out</a>
     {% else %}
+        <b>Authenticated as: Our Guest</b>/
         <a href="{% url 'signup' %}">Sign Up</a>/
         <a href="{% url 'login' %}">Log In</a>/
     {% endif  %}
