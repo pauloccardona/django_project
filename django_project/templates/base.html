@@ -8,10 +8,11 @@
     <h1>Don Felix Gutierrez Dinner Xperience</h1>
     <a href="{% url 'home' %}">Home</a>/
     {% if user.is_authenticated %}
-        <a href="{% url 'logout'%}">Log Out</a>
+        <a href="{% url 'password_change' %}">Change Password</a>/
+        <a href="{% url 'logout' %}">Log Out</a>
     {% else %}
-        <a href="{% url 'signup'%}">Sign Up</a>/
-        <a href="{% url 'login'%}">Log In</a>/
+        <a href="{% url 'signup' %}">Sign Up</a>/
+        <a href="{% url 'login' %}">Log In</a>/
     {% endif  %}
     <hr>
     {% block content %}
