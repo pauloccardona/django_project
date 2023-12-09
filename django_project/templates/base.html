@@ -8,7 +8,7 @@
     <h1>Don Felix Gutierrez Dinner Xperience</h1>
     <a href="{% url 'home' %}">Home</a>/
     {% if user.is_authenticated %}
-        <a href="{% url 'newcheck' %}">New Check</a>/ Authenticated as: {{ user.username }} 
+        <a href="{% url 'newcheck' %}">New Check</a>/ <b>Authenticated as: {{ user.username }}</b>/
         <a href="{% url 'password_change' %}">Change Password</a>/ 
         <a href="{% url 'logout' %}">Log Out</a>
     {% else %}
