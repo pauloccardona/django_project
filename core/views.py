@@ -2,6 +2,8 @@ from django.shortcuts import render,redirect
 from django.contrib.auth.forms import User
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
+from django.views.generic import TemplateView
+from django.contrib.auth.mixins import loginRequiredMixins
 
 # Create your views here.
 def home(request):
@@ -25,3 +27,6 @@ def signup(request):
 @login_required
 def new_check(request):
     return render(request,"new_check.html")
+
+class NewCheck(loginRequiredMixins,TemplateView):
+    template_name = "new_check.html"
