@@ -12,8 +12,8 @@
         <a href="{% url 'newcheck2' %}">New Check (Class-based view)</a>/ <b>Authenticated as: {{ user.username }}</b>/
         <a href="{% url 'password_change' %}">Change Password</a>/ 
         <a href="{% url 'logout' %}">Log Out</a>
-    {% else %}
         <a href="{% url 'signup' %}">Sign Up</a>/
+    {% else %}
         <a href="{% url 'login' %}">Log In</a>/ <b>Authenticated as: Our Guest</b>/
     {% endif  %}
     <hr>
