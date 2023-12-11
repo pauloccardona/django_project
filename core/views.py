@@ -28,5 +28,5 @@ def signup(request):
 def new_check(request):
     return render(request,"new_check.html")
 
-class NewCheck(loginRequiredMixin,TemplateView):
+class NewCheck(LoginRequiredMixin,TemplateView):
     template_name = "new_check.html"
