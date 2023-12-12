@@ -8,7 +8,7 @@
   </head>
   <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand-lg navbar-light mb-4">
       <div class="container">
           <a class="navbar-brand" href="#">Navbar</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,7 +31,7 @@
                 </li>
               </ul>
             {% else %}
-              <form class="d-flex" role="search">
+              <form class="form-inline my-2 my-lg-0">
                 <a href="{% url 'login' %}" class="btn btn-outline-secondary" >Log in</a>
                 <a href="{% url 'signup' %}" class="btn btn-primary ml-4">Sign up</a>
               </form>
