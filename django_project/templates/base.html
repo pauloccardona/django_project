@@ -23,10 +23,10 @@
                     {{ user.username }}
                   </a>
                   <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="{% url 'password_change' %}">Change Password</a>
+                    <a class="dropdown-item" href="#"></a>
                     <hr class="dropdown-divider">
-                    <a class="dropdown-item" href="#">Something else here</a>
+                    <a class="dropdown-item" href="{% url 'logout' %}">Log Out</a>
                   </ul>
                 </li>
               </ul>
@@ -41,7 +41,7 @@
     </nav>
 
     <div class="container">
-      <h1>Don Felix Gutierrez </h1>
+      <h1>Don Felix Gutierrez Mexican Dinner Experience</h1>
       <a href="{% url 'home' %}">Home</a>/
       {% if user.is_authenticated %}
         <a href="{% url 'newcheck' %}">New Check</a>/
