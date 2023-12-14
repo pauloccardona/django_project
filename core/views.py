@@ -24,6 +24,9 @@ def signup(request):
         'form': form
     })
 
+def logoutUser(request):
+    logout(request)
+    return redirect('home')
 @login_required
 def new_check(request):
     return render(request,"new_check.html")
