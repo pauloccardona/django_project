@@ -35,7 +35,7 @@ def ip_addresses():
         for x in (netifaces.AF_INET, netifaces.AF_INET6):
             if x in addrs:
                 ip_list.append(addrs[x][0]['addr'])
-                return ip_list
+    return ip_list
 
 ALLOWED_HOSTS = ip_addresses()
 
