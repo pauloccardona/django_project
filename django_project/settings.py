@@ -26,8 +26,8 @@ SECRET_KEY = '9e4c96f78fa04a4335c6b6276677b9c2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# Find out what the IP addresses are at run time
-# This is necessary because otherwise Gunicorn will reject the connections
+ #Find out what the IP addresses are at run time
+ #This is necessary because otherwise Gunicorn will reject the connections
 def ip_addresses():
     ip_list = []
     for interface in netifaces.interfaces():
@@ -35,12 +35,12 @@ def ip_addresses():
         for x in (netifaces.AF_INET, netifaces.AF_INET6):
             if x in addrs:
                 ip_list.append(addrs[x][0]['addr'])
-    return ip_list
+                return ip_list
 
 ALLOWED_HOSTS = ip_addresses()
 
 
-# Application definition
+#Application definition
 
 INSTALLED_APPS = [
     'core.apps.CoreConfig',
