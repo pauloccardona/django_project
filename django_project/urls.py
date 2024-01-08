@@ -15,10 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+
 from core import views
+
+from rest_framework import routers
 #from . import views
 
+router = routers.SimpleRouter()
 
+router.register(r'transactions', views.TransactionModelViewSet, basename="transaction")
 
 urlpatterns = [
     path("", views.home, name="home"),
@@ -27,5 +32,4 @@ urlpatterns = [
     path("signup/", views.signup, name="signup"),
     path("accounts/", include("django.contrib.auth.urls")),
     path("admin/", admin.site.urls),
-    
-]
+] + router.urls

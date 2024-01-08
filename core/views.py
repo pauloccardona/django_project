@@ -5,7 +5,16 @@ from django.contrib.auth.decorators import login_required
 from django.views.generic import TemplateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 
+from rest_framework.viewsets import ModelViewSet
+
+from core.models import Transaction, Plate, Extra
+from core.serializers import TransactionSerializer
+
 # Create your views here.
+class TransactionModelViewSet(ModelViewSet):
+    queryset = Transaction.objects.all()
+    serializer_class = TransactionSerializer
+
 def home(request):
     count = User.objects.count()
     return render(request,"home.html",{
