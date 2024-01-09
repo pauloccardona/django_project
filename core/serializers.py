@@ -5,5 +5,5 @@ from core.models import Transaction
 
 class TransactionSerializer(serializers.ModelSerializer):
     class Meta:
-        Model = Transaction
-        fields = ("id", "code")
+        Model : Transaction
+        fields : ("id", "code")

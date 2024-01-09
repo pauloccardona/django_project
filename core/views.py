@@ -7,7 +7,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 
 from rest_framework.viewsets import ModelViewSet
 
-from core.models import Transaction, Plate, Extra
+from core.models import Transaction
 from core.serializers import TransactionSerializer
 
 # Create your views here.
