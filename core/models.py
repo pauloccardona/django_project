@@ -1,22 +1,19 @@
 from django.db import models
 
 # Create your models here.
-class Transaction(models.Model):
-    code = models.CharField(max_length=10)
-
-    def __str__(self):
-        return self.code
+class Bill(models.Model):
+    name = models.CharField(max_length=10)
+    table_code = models.CharField(max_length=4)
 
 class Plate(models.Model):
+    bill= models.ForeignKey(Bill, related_name='plates', on_delete=models.CASCADE)
+    order = models.IntegerField()
     name = models.CharField(max_length=32)
-    transactions = models.ManyToManyField(Transaction)
+    price = models.IntegerField()
 
-    def __str__(self):
-        return self.name
+    class Meta:
+        unique_together = ['bill' , 'order']
+        ordering = ['order']
 
-class Extra(models.Model):
-    name = models.CharField(max_length=16)
-    plates = models.ManyToManyField(Plate)
-
-    def __str__(self):
-        return self.name
+        def __str__(self):
+            return '%d: %s' % (self.order, self.name)

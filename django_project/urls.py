@@ -23,7 +23,9 @@ from rest_framework import routers
 
 router = routers.SimpleRouter()
 
-router.register(r'transactions', views.TransactionModelViewSet, basename="transaction")
+router.register(r'bills', views.BillModelViewSet, basename="bill")
+router.register(r'plates', views.PlateModelViewSet, basename="plate")
+
 
 urlpatterns = [
     path("", views.home, name="home"),

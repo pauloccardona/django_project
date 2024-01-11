@@ -7,13 +7,18 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 
 from rest_framework.viewsets import ModelViewSet
 
-from core.models import Transaction
-from core.serializers import TransactionSerializer
+from core.models import Bill, Plate
+from core.serializers import BillSerializer, PlateSerializer
 
 # Create your views here.
-class TransactionModelViewSet(ModelViewSet):
-    queryset = Transaction.objects.all()
-    serializer_class = TransactionSerializer
+class BillModelViewSet(ModelViewSet):
+    queryset = Bill.objects.all()
+    serializer_class = BillSerializer
+
+class PlateModelViewSet(ModelViewSet):
+    queryset = Plate.objects.all()
+    serializer_class = PlateSerializer
+
 
 def home(request):
     count = User.objects.count()
